@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>State__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Car state</inlineHelpText>
+    <label>State</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>New</fullName>
+                <default>true</default>
+                <label>New</label>
+            </value>
+            <value>
+                <fullName>Ready for sale</fullName>
+                <default>false</default>
+                <label>Ready for sale</label>
+            </value>
+            <value>
+                <fullName>Sold</fullName>
+                <default>false</default>
+                <label>Sold</label>
+            </value>
+            <value>
+                <fullName>In repair</fullName>
+                <default>false</default>
+                <label>In repair</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

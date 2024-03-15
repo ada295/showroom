@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Production_Year</fullName>
+    <active>true</active>
+    <errorConditionFormula>LEN(TEXT( Production_Year__c ) )  &lt;&gt; 4</errorConditionFormula>
+    <errorDisplayField>Production_Year__c</errorDisplayField>
+    <errorMessage>Production year is incorrect!</errorMessage>
+</ValidationRule>

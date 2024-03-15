@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CarShowrooms__c</fullName>
+    <externalId>false</externalId>
+    <label>CarShowroom</label>
+    <referenceTo>Showroom__c</referenceTo>
+    <relationshipName>Vehicle_Showroom_Juction_Objects</relationshipName>
+    <relationshipOrder>1</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

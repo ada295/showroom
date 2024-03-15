@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Showroom__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>A showroom where the vehicle is physically available.</description>
+    <externalId>false</externalId>
+    <label>Showroom</label>
+    <referenceTo>Showroom__c</referenceTo>
+    <relationshipLabel>Vehicles</relationshipLabel>
+    <relationshipName>Vehicles</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>
