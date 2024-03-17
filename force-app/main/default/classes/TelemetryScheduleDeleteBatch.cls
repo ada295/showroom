@@ -1,3 +1,8 @@
+/**
+* @author Adrianna Zajac <adrianna.zajac@accenture.com>
+* @date 16/03/2024
+* @description This class handling batch methods for monthly deletion of telemetry older than 3 months.
+*/
 public class TelemetryScheduleDeleteBatch implements Database.Batchable<SObject>, Schedulable {
     public Database.QueryLocator start (Database.BatchableContext bc) {
         Date deadline = Date.today().addMonths(-3);
@@ -13,6 +18,11 @@ public class TelemetryScheduleDeleteBatch implements Database.Batchable<SObject>
     public void finish(Database.BatchableContext bc) {
     }
 
+    /**
+    * @author Adrianna Zajac <adrianna.zajac@accenture.com>
+    * @date 16/03/2024
+    * @description This method is responsible for scheduling the next batch method call.
+    */
     public void execute(SchedulableContext sc) {
         TelemetryScheduleDeleteBatch batch = new TelemetryScheduleDeleteBatch();
         System.debug('Old telemetry deleted successfully!');

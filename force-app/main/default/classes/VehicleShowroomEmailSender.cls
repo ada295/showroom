@@ -1,4 +1,15 @@
+/**
+    * @author Adrianna Zajac <adrianna.zajac@accenture.com>
+    * @date 16/03/2024
+    * @description This class provides future method for sending an email.
+    */
 public with sharing class VehicleShowroomEmailSender {
+
+    /**
+    * @author Adrianna Zajac <adrianna.zajac@accenture.com>
+    * @date 16/03/2024
+    * @description This future method is responsible for sending an email when new VehicleShowroom was inserted.
+    */
     @future
     public static void sendAnEmail (List<Id> vehicleShowroomsIds) {
         if (vehicleShowroomsIds.size() > 0) {

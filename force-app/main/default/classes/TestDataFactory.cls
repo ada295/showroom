@@ -1,6 +1,16 @@
+/**
+ * @author Adrianna Zajac <adrianna.zajac@accenture.com>
+ * @date 13/03/2024
+ * @description This class provides methods for generating tests data.
+ */
 @isTest
 public class TestDataFactory {
     
+    /**
+     * @author Adrianna Zajac <adrianna.zajac@accenture.com>
+     * @date 13/03/2024
+     * @description This method generates Vehicles.
+     */
 	public static List<Vehicle__c> createVehicles(Integer numVehicles) {
         List<Vehicle__c> vehicles = new List<Vehicle__c>();
         for(Integer i=0;i<numVehicles;i++) {
@@ -16,6 +26,11 @@ public class TestDataFactory {
         return vehicles;
     }
     
+    /**
+     * @author Adrianna Zajac <adrianna.zajac@accenture.com>
+     * @date 13/03/2024
+     * @description This method generates Showrooms.
+     */
     public static List<Showroom__c> createShowrooms(Integer numShowrooms){
         List<Showroom__c> showrooms = new List<Showroom__c>();
         for(Integer i=0;i<numShowrooms;i++) {
@@ -30,7 +45,12 @@ public class TestDataFactory {
         return showrooms;
     }
     
-     public static List<Vehicle_Showroom__c> createVehiclesShowrooms(Integer numVehiclesShowrooms){
+    /**
+     * @author Adrianna Zajac <adrianna.zajac@accenture.com>
+     * @date 13/03/2024
+     * @description This method generates VehicleShowrooms.
+     */
+    public static List<Vehicle_Showroom__c> createVehiclesShowrooms(Integer numVehiclesShowrooms){
         List<Showroom__c> showrooms = createShowrooms(numVehiclesShowrooms);
         List<Vehicle__c> vehicles = createVehicles(numVehiclesShowrooms);
         List<Vehicle_Showroom__c> vehicleShowrooms = new List<Vehicle_Showroom__c>(); 
@@ -46,6 +66,11 @@ public class TestDataFactory {
         return vehicleShowrooms;
     }
     
+    /**
+     * @author Adrianna Zajac <adrianna.zajac@accenture.com>
+     * @date 13/03/2024
+     * @description This method generates Telemetries.
+     */
     public static List<Telemetry__c> createTelemetries(Integer numTelemetries) {
         List<Telemetry__c> telemetries = new List<Telemetry__c>();
         for(Integer i=0;i<numTelemetries;i++) {
