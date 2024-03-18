@@ -4,7 +4,6 @@
     * @description This class provides future method for sending an email.
     */
 public with sharing class VehicleShowroomEmailSender {
-
     /**
     * @author Adrianna Zajac <adrianna.zajac@accenture.com>
     * @date 16/03/2024

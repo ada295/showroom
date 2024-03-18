@@ -5,7 +5,6 @@
  */
 @isTest
 public class VehicleShowroomTriggerTest {
-    
     /**
      * @author Adrianna Zajac <adrianna.zajac@accenture.com>
      * @date 13/03/2024
@@ -22,7 +21,6 @@ public class VehicleShowroomTriggerTest {
 
         System.assertEquals(0, Limits.getQueries(), 'No queries should be executed.');
     }
-
      /**
      * @author Adrianna Zajac <adrianna.zajac@accenture.com>
      * @date 13/03/2024
@@ -39,8 +37,7 @@ public class VehicleShowroomTriggerTest {
     
         System.assert(result.isSuccess(), 'Creating VehicleShowroom should success');
         System.assert(vsList[0].Id != null, 'Id of VehicleShowroom should not be null');
-	}
-    
+	}   
      /**
      * @author Adrianna Zajac <adrianna.zajac@accenture.com>
      * @date 13/03/2024
@@ -58,8 +55,7 @@ public class VehicleShowroomTriggerTest {
 
         System.assert(vsList[0] != null, 'Id of VehicleShowroom should not be null');
         System.assert(result.isSuccess(), 'Creating VehicleShowroom should be successful');
-	}
-    
+	}   
     /**
      * @author Adrianna Zajac <adrianna.zajac@accenture.com>
      * @date 13/03/2024
@@ -80,7 +76,6 @@ public class VehicleShowroomTriggerTest {
         System.assert(vsList[0] != null, 'Id of VehicleShowroom should not be null');
         System.assert(result.isSuccess(), 'Creating VehicleShowroom should be successful');
 	}
-
      /**
      * @author Adrianna Zajac <adrianna.zajac@accenture.com>
      * @date 13/03/2024
@@ -103,8 +98,7 @@ public class VehicleShowroomTriggerTest {
         System.assertEquals(1, result.getErrors().size(), 'There should be one error');
         System.assertEquals('This vehicle is already available in ' + vehicleShowrooms[0].CarShowrooms__c, result.getErrors()[0].getMessage());
 	}
-
-      /**
+    /**
      * @author Adrianna Zajac <adrianna.zajac@accenture.com>
      * @date 13/03/2024
      * @description Test method to check vehicle update behavior

@@ -4,7 +4,6 @@
  * @description This class provides methods for handling vehicles.
  */
 public with sharing class VehicleHandler {
-
     /**
      * @author Adrianna Zajac <adrianna.zajac@accenture.com>
      * @date 13/03/2024
@@ -19,7 +18,6 @@ public with sharing class VehicleHandler {
         createTask(vehiclesToDelete);
         deleteVehicleTelemetry(vehiclesToDelete);
     }
-
     /**
      * @author Adrianna Zajac <adrianna.zajac@accenture.com>
      * @date 13/03/2024
@@ -42,8 +40,7 @@ public with sharing class VehicleHandler {
             tasks.add(t);
         }
         insert tasks;
-    }
-    
+    }   
     /**
      * @author Adrianna Zajac <adrianna.zajac@accenture.com>
      * @date 13/03/2024

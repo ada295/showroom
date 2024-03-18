@@ -7,11 +7,7 @@ trigger VehicleShowroomTrigger on Vehicle_Showroom__c (before insert, before upd
         }
     } else if(Trigger.isAfter) {
         if (Trigger.isInsert) {
-            List<Id> newVehicleShowroomsIds = new List<Id>();
-            for(Vehicle_Showroom__c vehicleShowroom : Trigger.new){
-                newVehicleShowroomsIds.add(vehicleShowroom.Id);
-            }
-            VehicleShowroomEmailSender.sendAnEmail(newVehicleShowroomsIds);
+           VehicleShowroomHandler.handlerAfterInsert(Trigger.new);
         }
     }
 }

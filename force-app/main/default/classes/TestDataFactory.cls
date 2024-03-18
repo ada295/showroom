@@ -4,8 +4,7 @@
  * @description This class provides methods for generating tests data.
  */
 @isTest
-public class TestDataFactory {
-    
+public class TestDataFactory {  
     /**
      * @author Adrianna Zajac <adrianna.zajac@accenture.com>
      * @date 13/03/2024
@@ -24,8 +23,7 @@ public class TestDataFactory {
         }
         insert vehicles;
         return vehicles;
-    }
-    
+    }   
     /**
      * @author Adrianna Zajac <adrianna.zajac@accenture.com>
      * @date 13/03/2024
@@ -43,8 +41,7 @@ public class TestDataFactory {
         }
         insert showrooms;
         return showrooms;
-    }
-    
+    }   
     /**
      * @author Adrianna Zajac <adrianna.zajac@accenture.com>
      * @date 13/03/2024
@@ -64,8 +61,7 @@ public class TestDataFactory {
             vehicleShowrooms.add(vehicleShowroom);
         }         
         return vehicleShowrooms;
-    }
-    
+    }   
     /**
      * @author Adrianna Zajac <adrianna.zajac@accenture.com>
      * @date 13/03/2024

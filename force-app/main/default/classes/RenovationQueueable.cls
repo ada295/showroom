@@ -8,7 +8,6 @@ public with sharing class RenovationQueueable implements Queueable{
     public RenovationQueueable(List<Showroom__c> showrooms) {
         this.showrooms = showrooms;
     }
-
     /**
      * @author Adrianna Zajac <adrianna.zajac@accenture.com>
      * @date 16/03/2024
@@ -37,7 +36,6 @@ public with sharing class RenovationQueueable implements Queueable{
         }
         update renovationCases;
     }
-
     /**
      * @author Adrianna Zajac <adrianna.zajac@accenture.com>
      * @date 16/03/2024

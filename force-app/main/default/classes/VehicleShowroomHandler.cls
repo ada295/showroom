@@ -24,4 +24,16 @@ public with sharing class VehicleShowroomHandler {
             }
         }
     }
+    /**
+     * @author Adrianna Zajac <adrianna.zajac@accenture.com>
+     * @date 17/03/2024
+     * @description The method handles logic ifter insertion of Vehicle_Showroom__c records.
+     */
+    public static void handlerAfterInsert(List<Vehicle_Showroom__c <inInsertVsList>){
+        List<Id> newVehicleShowroomsIds = new List<Id>();
+        for(Vehicle_Showroom__c vehicleShowroom : Trigger.new){
+            newVehicleShowroomsIds.add(vehicleShowroom.Id);
+        }
+        VehicleShowroomEmailSender.sendAnEmail(newVehicleShowroomsIds);
+    }
 }

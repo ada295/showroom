@@ -10,14 +10,12 @@ public class TelemetryScheduleDeleteBatch implements Database.Batchable<SObject>
         //Date deadline = Date.today().addDays(-5);
         //return Database.getQueryLocator('SELECT Id FROM Telemetry__c WHERE CreatedDate < :deadline');
     }
-
     public void execute(Database.BatchableContext bc, List<Telemetry__c> telemetryToDelete) {
         delete telemetryToDelete;
     }
 
     public void finish(Database.BatchableContext bc) {
     }
-
     /**
     * @author Adrianna Zajac <adrianna.zajac@accenture.com>
     * @date 16/03/2024

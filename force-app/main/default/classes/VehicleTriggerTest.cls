@@ -1,11 +1,9 @@
-
 /**
  * @author Adriann Zajac <adrianna.zajac@accenture.com>
  * @date 13/03/2024
  * @description This class contains test methods for the VehicleTrigger trigger.
  */@isTest
 public class VehicleTriggerTest {
-
     /**
      * @author Adrianna Zajac <adrianna.zajac@accenture.com>
      * @date 13/03/2024
@@ -22,7 +20,6 @@ public class VehicleTriggerTest {
         Integer taskNumber = [SELECT COUNT() FROM Task];
         System.assertEquals(0, taskNumber, 'No new tasks should be created');
     }
-
      /**
      * @author Adrianna Zajac <adrianna.zajac@accenture.com>
      * @date 13/03/2024
@@ -40,8 +37,7 @@ public class VehicleTriggerTest {
         List<Telemetry__c> deletedTelemetries = [SELECT Id FROM Telemetry__c WHERE Vehicle__c = :vehicles[0].Id];
         System.assert(result.isSuccess(), 'Deleting telemetry should be successful');
         System.assertEquals(0, deletedTelemetries.size(), 'Telemetry list should be empty');
-    }
-    
+    }   
     /**
      * @author Adrianna Zajac <adrianna.zajac@accenture.com>
      * @date 13/03/2024
