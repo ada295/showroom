@@ -8,6 +8,10 @@ public with sharing class ShowroomHandler {
      * @author Adrianna Zajac <adrianna.zajac@accenture.com>
      * @date 13/03/2024
      * @description The method handles logic after update of Showroom__c records.
+     * 
+     * @param inUpdatedShowrooms List of showrooms with new data.
+     * @param inOldShowrooms Map of showrooms with old data.
+     * @param closedShowrooms List of showrooms which new status is 'Closed'.
      */
     public static void handlerAfterUpdate(List<Showroom__c> inUpdatedShowrooms, Map<Id, Showroom__c> inOldShowrooms){
         if(inUpdatedShowrooms == null){
@@ -21,6 +25,10 @@ public with sharing class ShowroomHandler {
      * @author Adrianna Zajac <adrianna.zajac@accenture.com>
      * @date 13/03/2024
      * @description The method returns list of showrooms which are updated to be closed.
+     * 
+     * @param inUpdatedShowrooms List of showrooms with new data.
+     * @param inOldShowrooms Map of showrooms with old data.
+     * @param closedShowrooms List of showrooms which new status is 'Closed'.
      */
     private static List<Showroom__c> getClosedShowrooms(List<Showroom__c> inUpdatedShowrooms,  Map<Id, Showroom__c> inOldShowrooms){
         List<Showroom__c> closedShowrooms = new List<Showroom__c>();

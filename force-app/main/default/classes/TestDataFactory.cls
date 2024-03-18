@@ -9,6 +9,8 @@ public class TestDataFactory {
      * @author Adrianna Zajac <adrianna.zajac@accenture.com>
      * @date 13/03/2024
      * @description This method generates Vehicles.
+     * 
+     * @param numVehicles Number of Vehicle__c to generate.
      */
 	public static List<Vehicle__c> createVehicles(Integer numVehicles) {
         List<Vehicle__c> vehicles = new List<Vehicle__c>();
@@ -28,6 +30,8 @@ public class TestDataFactory {
      * @author Adrianna Zajac <adrianna.zajac@accenture.com>
      * @date 13/03/2024
      * @description This method generates Showrooms.
+     * 
+     * @param numShowrooms Number of Showroom__c to generate.
      */
     public static List<Showroom__c> createShowrooms(Integer numShowrooms){
         List<Showroom__c> showrooms = new List<Showroom__c>();
@@ -46,6 +50,8 @@ public class TestDataFactory {
      * @author Adrianna Zajac <adrianna.zajac@accenture.com>
      * @date 13/03/2024
      * @description This method generates VehicleShowrooms.
+     * 
+     * @param numVehiclesShowrooms Number of Vehicle_Showroom__c to generate.
      */
     public static List<Vehicle_Showroom__c> createVehiclesShowrooms(Integer numVehiclesShowrooms){
         List<Showroom__c> showrooms = createShowrooms(numVehiclesShowrooms);
@@ -66,6 +72,8 @@ public class TestDataFactory {
      * @author Adrianna Zajac <adrianna.zajac@accenture.com>
      * @date 13/03/2024
      * @description This method generates Telemetries.
+     * 
+     * @param numTelemetries Number of Telemetry__c to generate.
      */
     public static List<Telemetry__c> createTelemetries(Integer numTelemetries) {
         List<Telemetry__c> telemetries = new List<Telemetry__c>();

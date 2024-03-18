@@ -2,6 +2,8 @@
  * @author Adrianna Zajac <adrianna.zajac@accenture.com>
  * @date 16/03/2024
  * @description This class provides methods for handling renovation of Showroom.
+ * 
+ * @param showrooms List of closed showrooms to process.
  */
 public with sharing class RenovationQueueable implements Queueable{
     private List<Showroom__c> showrooms;
@@ -12,6 +14,9 @@ public with sharing class RenovationQueueable implements Queueable{
      * @author Adrianna Zajac <adrianna.zajac@accenture.com>
      * @date 16/03/2024
      * @description This future method send HttpRequest with closed Showroom cases.
+     * 
+     * @param casesIds List of new casesIds to be processed. 
+     * @param renovationCases List of cases with ids in casesIds.
      */
     @Future(callout=true)
     public static void executeAsync(List<Id> casesIds){
@@ -39,7 +44,10 @@ public with sharing class RenovationQueueable implements Queueable{
     /**
      * @author Adrianna Zajac <adrianna.zajac@accenture.com>
      * @date 16/03/2024
-     * @description This queueable method generating cases for closed Showrooms .
+     * @description This queueable method generating cases for closed Showrooms.
+     * 
+     * @param renovationCases List of new cases for closed showrooms.
+     * @param casesIds List of new cases Ids for closed showrooms.
      */
     public void execute(QueueableContext context) {
         List<Case> renovationCases = new List<Case>();

@@ -8,6 +8,10 @@ public with sharing class VehicleShowroomHandler {
      * @author Adrianna Zajac <adrianna.zajac@accenture.com>
      * @date 13/03/2024
      * @description The method handles logic before insertion or update of Vehicle_Showroom__c records.
+     * 
+     * @param vsListNew List of new Vehicle_Showroom__c records or Vehicle_Showroom__c records with updated data.
+     * @param vsListOld List with data before updating Vehicle_Showroom__c records.
+     * @param showroomsWithAvailableVehicle List of Vehicle_Showroom__c witch vahicle is available in showroom.
      */
     public static void handlerBeforeInsertUpdate(List<Vehicle_Showroom__c> vsListNew, List<Vehicle_Showroom__c> vsListOld){
         if(vsListNew == null){
@@ -28,6 +32,9 @@ public with sharing class VehicleShowroomHandler {
      * @author Adrianna Zajac <adrianna.zajac@accenture.com>
      * @date 17/03/2024
      * @description The method handles logic ifter insertion of Vehicle_Showroom__c records.
+     * 
+     * @param inInsertVsList List of newly inserted Vehicle_Showroom__c records.
+     * @param newVehicleShowroomsIds List of newly inserted Vehicle_Showroom__c ids.
      */
     public static void handlerAfterInsert(List<Vehicle_Showroom__c> inInsertVsList){
         List<Id> newVehicleShowroomsIds = new List<Id>();

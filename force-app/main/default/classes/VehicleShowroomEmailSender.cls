@@ -5,12 +5,15 @@
     */
 public with sharing class VehicleShowroomEmailSender {
     /**
-    * @author Adrianna Zajac <adrianna.zajac@accenture.com>
-    * @date 16/03/2024
-    * @description This future method is responsible for sending an email when new VehicleShowroom was inserted.
+     * @author Adrianna Zajac <adrianna.zajac@accenture.com>
+     * @date 16/03/2024
+     * @description This future method is responsible for sending an email when new VehicleShowroom was inserted.
+     *
+     *@param vehicleShowroomsIds List of new Vehicle_Showroom__c ids.
+     *@param vehicleShowrooms List of new  Vehicle_Showroom__c.
     */
     @future
-    public static void sendAnEmail (List<Id> vehicleShowroomsIds) {
+    public static void sendAnEmail (List<Id> Vehicle_Showroom__c) {
         if (vehicleShowroomsIds.size() > 0) {
             List<Vehicle_Showroom__c> vehicleShowrooms = [SELECT Id, Vehicles__c, CarShowrooms__c 
             FROM Vehicle_Showroom__c WHERE Id IN :vehicleShowroomsIds];
