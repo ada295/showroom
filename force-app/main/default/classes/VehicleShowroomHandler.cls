@@ -29,9 +29,9 @@ public with sharing class VehicleShowroomHandler {
      * @date 17/03/2024
      * @description The method handles logic ifter insertion of Vehicle_Showroom__c records.
      */
-    public static void handlerAfterInsert(List<Vehicle_Showroom__c <inInsertVsList>){
+    public static void handlerAfterInsert(List<Vehicle_Showroom__c> inInsertVsList){
         List<Id> newVehicleShowroomsIds = new List<Id>();
-        for(Vehicle_Showroom__c vehicleShowroom : Trigger.new){
+        for(Vehicle_Showroom__c vehicleShowroom : inInsertVsList){
             newVehicleShowroomsIds.add(vehicleShowroom.Id);
         }
         VehicleShowroomEmailSender.sendAnEmail(newVehicleShowroomsIds);
