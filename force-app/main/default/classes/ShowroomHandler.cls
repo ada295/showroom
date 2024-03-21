@@ -12,28 +12,16 @@ public with sharing class ShowroomHandler {
      * @param inUpdatedShowrooms List of showrooms with new data.
      * @param inOldShowrooms Map of showrooms with old data.
      * @param closedShowrooms List of showrooms which new status is 'Closed'.
-     * @param renovationCases List of cases for closed showrooms.
      */
     public static void handlerAfterUpdate(List<Showroom__c> inUpdatedShowrooms, Map<Id, Showroom__c> inOldShowrooms){
         if(inUpdatedShowrooms == null){
             return;
         }
         List<Showroom__c> closedShowrooms = getClosedShowrooms(inUpdatedShowrooms, inOldShowrooms);
-
-        List<Case> renovationCases = new List<Case>();
-        for (Showroom__c showroom : closedShowrooms) {
-            Case renovationCase = new Case(
-                Showroom__c = showroom.Id,
-                Subject = 'Renovation Case ' + showroom.Name 
-            );
-            renovationCases.add(renovationCase);
+        if (closedShowrooms.size()>0) {
+            CaseRenovationQueueable caseRenovation = new CaseRenovationQueueable(closedShowrooms);
+            System.enqueueJob(caseRenovation); 
         }
-        insert renovationCases;
-
-        if(renovationCases.size()>0){
-            RenovationQueueable renovation = new RenovationQueueable(renovationCases);
-            System.enqueueJob(renovation);
-        } 
     }
     /**
      * @author Adrianna Zajac <adrianna.zajac@accenture.com>

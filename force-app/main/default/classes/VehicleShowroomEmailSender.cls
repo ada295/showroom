@@ -13,7 +13,7 @@ public with sharing class VehicleShowroomEmailSender {
      *@param vehicleShowrooms List of new  Vehicle_Showroom__c.
     */
     @future
-    public static void sendAnEmail (List<Id> Vehicle_Showroom__c) {
+    public static void sendAnEmail (List<Id> vehicleShowroomsIds) {
         if (vehicleShowroomsIds.size() > 0) {
             List<Vehicle_Showroom__c> vehicleShowrooms = [SELECT Id, Vehicles__c, CarShowrooms__c 
             FROM Vehicle_Showroom__c WHERE Id IN :vehicleShowroomsIds];
