@@ -1,0 +1,8 @@
+<template>
+    <lightning-record-view-form record-id={recordId} object-api-name="Vehicle__c" density="compact" columns="1"
+        onerror={handleError}>
+        <lightning-output-field field-name="Name"></lightning-output-field>
+        <lightning-output-field field-name="Brands__c"></lightning-output-field>
+        <lightning-output-field field-name="Model__c"></lightning-output-field>
+    </lightning-record-view-form>
+</template>
