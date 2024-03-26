@@ -88,4 +88,22 @@ public class TestDataFactory {
         insert telemetries;
         return telemetries;
     }  
+    /**
+     * @author Adrianna Zajac <adrianna.zajac@accenture.com>
+     * @date 26/03/2024
+     * @description This method generates Accounts.
+     * 
+     * @param numAccounts Number of Account to generate.
+     */
+	public static List<Account> createAccounts(Integer numAccounts) {
+        List<Account> accounts = new List<Account>();
+        for(Integer i=0;i<numAccounts;i++) {
+            Account account = new Account(
+                Name = 'TestName'+i
+            );
+            accounts.add(account);
+        }
+        insert accounts;
+        return accounts;
+    }   
 }
