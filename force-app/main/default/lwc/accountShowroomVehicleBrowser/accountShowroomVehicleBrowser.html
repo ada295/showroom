@@ -1,8 +1,5 @@
 <template>
-    <!-- <div class="container"> -->
-    <!-- <div class="slds-grid slds-wrap container"> -->
     <div lwc:if={isZeroPage}>
-        <!-- <div lwc:if={isZeroPage} class="slds-col slds-size_1-of-3 object-list"> -->
         <lightning-card title="Accounts" if:true={accounts}>
             <div class="slds-card__body slds-card__body_inner">
                 <template for:each={accounts} for:item="account">
@@ -23,8 +20,10 @@
                     </div>
                 </template>
             </div>
-            <lightning-button class="back-button" label="Back" onclick={handleButtonBackClick}>Back</lightning-button>
         </lightning-card>
+        </br>
+        <lightning-button variant="brand" class="back-button" label="Back"
+            onclick={handleButtonBackClick}>Back</lightning-button>
     </div>
 
     <div lwc:if={isSecondPage}>
@@ -37,14 +36,16 @@
                     </div>
                 </template>
             </div>
-            <lightning-button variant="brand" class="back-button" label="Back"
-                onclick={handleButtonBackClick}>Back</lightning-button>
         </lightning-card>
+        </br>
+        <lightning-button variant="brand" class="back-button" label="Back"
+            onclick={handleButtonBackClick}>Back</lightning-button>
     </div>
 
     <div lwc:if={isThirdPage}>
         <c-vehicle-details record-id={vehicleId}></c-vehicle-details>
-        <lightning-button class="back-button" label="Back" onclick={handleButtonBackClick}>Back</lightning-button>
+        </br>
+        <lightning-button variant="brand" class="back-button" label="Back"
+            onclick={handleButtonBackClick}>Back</lightning-button>
     </div>
-
 </template>

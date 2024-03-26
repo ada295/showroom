@@ -2,29 +2,9 @@
     cursor: pointer;
     color: #417198; 
     text-decoration: underline;
+    font-weight: bold;
 }
-
-.vehicle-button{
-    border-color: #417198;
-    border-width: 1px;
-    padding: 5%;
-}
-
-/* .object-list{
-    max-height: 300px;
-    overflow-y: scroll;
-}
-
-.container{
-    
-} */
 
 .back-button{
     margin-left: 30px;
-    background-color: #417198 !important;
-    color: white;
-}
-
-.back-button:hover{
-    background-color: orange !important;
 }
